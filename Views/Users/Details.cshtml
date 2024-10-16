@@ -1,4 +1,4 @@
-﻿@model TheOrchidArchade.Models.User
+﻿@model TheOrchidArchade.Models.UserDetailsViewModel
 
 @{
     ViewData["Title"] = "Details";
@@ -10,39 +10,73 @@
     <h4>User</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Email)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Email)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Password)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Password)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Password)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Password)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Username)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Username)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Username)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Username)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.revenue)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.revenue)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.revenue)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.revenue)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.isDeveloper)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.isDeveloper)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.isDeveloper)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.isDeveloper)
         </dd>
     </dl>
 </div>
+
+<h4>Purchased Games</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var game in Model.Games)
+        {
+            <tr>
+                <td>@game.Title</td>
+                <td>@game.Price</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(game.DownloadUrl))
+                    {
+                        <a href="@game.DownloadUrl" class="btn btn-primary" target="_blank">Download</a>
+                    }
+                    else
+                    {
+                        <span class="text-muted">No download link available</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Create" asp-controller="Review" asp-route-gameId="@game.Id" asp-route-userId="@Model.User.Id" class="btn btn-success">Add Review</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.User?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

@@ -2,18 +2,19 @@
 {
     public class Review
     {
-        public required int Id { get; set; }
+        public int Id { get; set; }
 
-        public required string Description { get; set; }
+        public string? Description { get; set; }
 
-        public required int Rating { get; set; }
+        public int Rating { get; set; }
 
         public required int GameId { get; set; }
 
-        public required Game Game { get; set; }
+        public Game? Game { get; set; }
 
         public required int UserId { get; set; }
 
-        public required User User { get; set; }
+        public User? User { get; set; }
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -36,6 +37,7 @@ namespace TheOrchidArchade.Controllers
 
             var game = await _context.games
                 .Include(g => g.Developer)
+                .Include(g => g.Reviews)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (game == null)
             {
@@ -57,10 +59,9 @@ namespace TheOrchidArchade.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,CoverImage,Description,Genre,Price,Revenue,DeveloperId")] Game game)
+        public async Task<IActionResult> Create([Bind("Id,Title,CoverImage,Description,Genre,Price,Revenue,DownloadUrl,DeveloperId")] Game game)
         {
             game.Revenue = 0;
-            Console.WriteLine("GetsHere");
             if (ModelState.IsValid)
             {
                 _context.Add(game);
@@ -93,7 +94,7 @@ namespace TheOrchidArchade.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,CoverImage,Description,Genre,Price,Revenue,DeveloperId")] Game game)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,CoverImage,Description,Genre,Price,Revenue,DownloadUrl,DeveloperId")] Game game)
         {
             if (id != game.Id)
             {
@@ -122,6 +123,56 @@ namespace TheOrchidArchade.Controllers
             }
             ViewData["DeveloperId"] = new SelectList(_context.users, "Id", "Id", game.DeveloperId);
             return View(game);
+        }
+
+        public IActionResult Buy(int id)
+        {
+            var game = _context.games.Find(id);
+
+            if (game == null)
+            {
+                return NotFound();
+            }
+
+            // Populate the ViewModel
+            var viewModel = new BuyGameViewModel
+            {
+                GameId = game.Id,
+                Title = game.Title,
+                Price = game.Price
+            };
+
+            // Populate ViewBag with the list of users
+            ViewBag.UserId = new SelectList(_context.users, "Id", "Username");
+
+            return View(viewModel);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> BuyGame(int userId, int gameId)
+        {
+
+            // Create a new transaction object
+            var transaction = new Transaction
+            {
+                UserId = userId,
+                GameId = gameId,
+                Date = DateTime.Now
+            };
+
+
+            if (ModelState.IsValid)
+            {
+                _context.transactions.Add(transaction);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            // In case of an invalid model state, return to the view
+            return View();
         }
 
         // GET: Games/Delete/5

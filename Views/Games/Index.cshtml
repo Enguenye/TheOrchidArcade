@@ -42,9 +42,16 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CoverImage)
-            </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.CoverImage))
+                    {
+                        <img src="@item.CoverImage" alt="Game Cover" style="width: 100px; height: auto;" />
+                    }
+                    else
+                    {
+                        <span class="text-muted">No image available</span>
+                    }
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
@@ -58,9 +65,10 @@
                 @Html.DisplayFor(modelItem => item.Revenue)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Developer.Id)
+                @Html.DisplayFor(modelItem => item.Developer.Username)
             </td>
             <td>
+                <a asp-action="Buy" asp-route-id="@item.Id">Buy</a> |
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>

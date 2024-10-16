@@ -26,21 +26,29 @@ namespace TheOrchidArchade.Controllers
         }
 
         // GET: Users/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            var user = await _context.users.FindAsync(id);
 
-            var user = await _context.users
-                .FirstOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {
                 return NotFound();
             }
 
-            return View(user);
+            // Query to get all games for this user via the Transactions table
+            var userGames = from t in _context.transactions
+                            join g in _context.games on t.GameId equals g.Id
+                            where t.UserId == id
+                            select g;
+
+            // Pass the user and their purchased games to the view
+            var viewModel = new UserDetailsViewModel
+            {
+                User = user,
+                Games = await userGames.ToListAsync()
+            };
+
+            return View(viewModel);
         }
 
         // GET: Users/Create

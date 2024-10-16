@@ -41,6 +41,10 @@ namespace TheOrchidArchade.Migrations
                     b.Property<int>("DeveloperId")
                         .HasColumnType("int");
 
+                    b.Property<string>("DownloadUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Genre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

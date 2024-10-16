@@ -47,17 +47,21 @@ namespace TheOrchidArchade.Controllers
         }
 
         // GET: Reviews/Create
-        public IActionResult Create()
+        [HttpGet("Review/Create")]
+        public IActionResult Create(int gameId, int userId)
         {
-            ViewData["GameId"] = new SelectList(_context.games, "Id", "Id");
-            ViewData["UserId"] = new SelectList(_context.users, "Id", "Id");
-            return View();
+            var review = new Review
+            {
+                GameId = gameId,
+                UserId = userId
+            };
+            return View(review);
         }
 
         // POST: Reviews/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost("Review/Create")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Description,Rating,GameId,UserId")] Review review)
         {
@@ -67,8 +71,6 @@ namespace TheOrchidArchade.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["GameId"] = new SelectList(_context.games, "Id", "Id", review.GameId);
-            ViewData["UserId"] = new SelectList(_context.users, "Id", "Id", review.UserId);
             return View(review);
         }
 

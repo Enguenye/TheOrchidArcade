@@ -1,0 +1,30 @@
+﻿@model TheOrchidArchade.Models.BuyGameViewModel
+
+@{
+    ViewData["Title"] = "Buy";
+}
+
+<h1>Buy @Model.Title</h1>
+
+<form asp-action="BuyGame">
+    <input type="hidden" asp-for="GameId" />
+
+    <div class="form-group">
+        <label for="UserId">User</label>
+        <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Confirm Purchase" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
