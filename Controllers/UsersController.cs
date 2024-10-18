@@ -64,6 +64,7 @@ namespace TheOrchidArchade.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Email,Password,Username,revenue,isDeveloper")] User user)
         {
+
             user.revenue = 0;
             if (ModelState.IsValid)
             {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TheOrchidArchade")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+682fc8c01c0016922bf4b0a8dee3f3384e27e18e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e327204fb699ba03d046732226b65044368a0ef0")]
 [assembly: System.Reflection.AssemblyProductAttribute("TheOrchidArchade")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TheOrchidArchade")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
