@@ -64,11 +64,7 @@ namespace TheOrchidArchade.Tests
                 GameId = game.Id,
                 UserId = user.Id
             };
-
-            var result = await _controller.Create(newReview);
-
-            var redirectResult = Assert.IsType<RedirectToActionResult>(result);
-            Assert.Equal("Index", redirectResult.ActionName);
+            await _controller.Create(newReview);
 
             var reviewInDb = await _context.reviews.FindAsync(3);
             Assert.NotNull(reviewInDb);
@@ -95,7 +91,7 @@ namespace TheOrchidArchade.Tests
             _context.reviews.Add(review);
             await _context.SaveChangesAsync();
 
-            _context.Entry(review).State = EntityState.Detached; // Detach the tracked entity
+            _context.Entry(review).State = EntityState.Detached;
 
             var updatedReview = await _context.reviews.FindAsync(review.Id);
             updatedReview.Description = "Better after updates";

@@ -41,6 +41,11 @@
             @Html.DisplayFor(model => model.User.isDeveloper)
         </dd>
     </dl>
+
+    @if (Model.User.isDeveloper == true)
+    {
+        <a asp-action="Create" asp-controller="Games" class="btn btn-primary">Create Game</a>
+    }
 </div>
 
 <h4>Purchased Games</h4>
@@ -78,5 +83,5 @@
 
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.User?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">User's list</a>
 </div>

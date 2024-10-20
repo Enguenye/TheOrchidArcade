@@ -3,231 +3,365 @@
   "WorkspaceRootPath": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\views\\reviews\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:views\\reviews\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\tests\\gamescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:tests\\gamescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\tests\\reviewscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:tests\\reviewscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\tests\\gamescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:tests\\gamescontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\tests\\userscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:tests\\userscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\theorchidarchade.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:theorchidarchade.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\tests\\userscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:tests\\userscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\views\\reviews\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:views\\reviews\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\theorchidarchade.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:theorchidarchade.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\views\\games\\buy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:views\\games\\buy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\views\\games\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:views\\games\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\models\\userdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:models\\userdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|c:\\users\\jose-\\documents\\umd\\fall2024\\secdev\\project\\theorchidarchade\\migrations\\20241020134101_seeddatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FA94B4C-9688-4544-A6E1-56157A077E02}|TheOrchidArchade.csproj|solutionrelative:migrations\\20241020134101_seeddatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedHeight": 200,
           "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Reviews\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Reviews\\Index.cshtml",
-              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Reviews\\Index.cshtml",
-              "RelativeToolTip": "Views\\Reviews\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T16:16:24.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GamesController.cs",
-              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Controllers\\GamesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GamesController.cs",
-              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Controllers\\GamesController.cs",
-              "RelativeToolTip": "Controllers\\GamesController.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T16:13:33.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAACNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-18T15:58:14.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T15:47:25.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ReviewsController.cs",
-              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Controllers\\ReviewsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReviewsController.cs",
-              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Controllers\\ReviewsController.cs",
-              "RelativeToolTip": "Controllers\\ReviewsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:37:17.11Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ReviewsControllerTests.cs",
-              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Tests\\ReviewsControllerTests.cs",
-              "RelativeDocumentMoniker": "Tests\\ReviewsControllerTests.cs",
-              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Tests\\ReviewsControllerTests.cs",
-              "RelativeToolTip": "Tests\\ReviewsControllerTests.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAmwFQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:36:53.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GamesControllerTests.cs",
-              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Tests\\GamesControllerTests.cs",
-              "RelativeDocumentMoniker": "Tests\\GamesControllerTests.cs",
-              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Tests\\GamesControllerTests.cs",
-              "RelativeToolTip": "Tests\\GamesControllerTests.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAmwHUAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:23:08.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Models\\Game.cs",
-              "RelativeDocumentMoniker": "Models\\Game.cs",
-              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Models\\Game.cs",
-              "RelativeToolTip": "Models\\Game.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAYAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T18:47:02.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Users\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Users\\Create.cshtml",
-              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Users\\Create.cshtml",
-              "RelativeToolTip": "Views\\Users\\Create.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T16:06:45.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T18:46:53.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAcwEYAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T18:44:16.346Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "UsersControllerTests.cs",
               "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Tests\\UsersControllerTests.cs",
               "RelativeDocumentMoniker": "Tests\\UsersControllerTests.cs",
               "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Tests\\UsersControllerTests.cs",
               "RelativeToolTip": "Tests\\UsersControllerTests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA1AAAA",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAkwBEAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T18:43:54.854Z"
+              "WhenOpened": "2024-10-20T15:31:50.483Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TheOrchidArchade.csproj",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-20T15:04:05.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GamesControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Tests\\GamesControllerTests.cs",
+              "RelativeDocumentMoniker": "Tests\\GamesControllerTests.cs",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Tests\\GamesControllerTests.cs",
+              "RelativeToolTip": "Tests\\GamesControllerTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:51:13.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReviewsControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Tests\\ReviewsControllerTests.cs",
+              "RelativeDocumentMoniker": "Tests\\ReviewsControllerTests.cs",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Tests\\ReviewsControllerTests.cs",
+              "RelativeToolTip": "Tests\\ReviewsControllerTests.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAkwF8AAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:50:49.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReviewsController.cs",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "Controllers\\ReviewsController.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAvwEUAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:15:31.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Reviews\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reviews\\Create.cshtml",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Reviews\\Create.cshtml",
+              "RelativeToolTip": "Views\\Reviews\\Create.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T14:15:27.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:08:34.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Users\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Details.cshtml",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Users\\Details.cshtml",
+              "RelativeToolTip": "Views\\Users\\Details.cshtml",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAgwFcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T13:46:30.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TheOrchidArchade",
               "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\TheOrchidArchade.csproj",
               "RelativeDocumentMoniker": "TheOrchidArchade.csproj",
               "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\TheOrchidArchade.csproj",
               "RelativeToolTip": "TheOrchidArchade.csproj",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAUwBgAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-12T18:56:02.595Z"
+              "WhenOpened": "2024-10-20T15:00:15.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GamesController.cs",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Controllers\\GamesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GamesController.cs",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Controllers\\GamesController.cs",
+              "RelativeToolTip": "Controllers\\GamesController.cs",
+              "ViewState": "AQIAAJUAAAAAAAAAAAAvwKoAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T13:54:18.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Games\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Games\\Create.cshtml",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Games\\Create.cshtml",
+              "RelativeToolTip": "Views\\Games\\Create.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T13:53:11.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Buy.cshtml",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Games\\Buy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Games\\Buy.cshtml",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Games\\Buy.cshtml",
+              "RelativeToolTip": "Views\\Games\\Buy.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T13:52:47.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserDetailsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Models\\UserDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\UserDetailsViewModel.cs",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Models\\UserDetailsViewModel.cs",
+              "RelativeToolTip": "Models\\UserDetailsViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T13:46:26.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20241020134101_SeedDatabase.cs",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Migrations\\20241020134101_SeedDatabase.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241020134101_SeedDatabase.cs",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Migrations\\20241020134101_SeedDatabase.cs",
+              "RelativeToolTip": "Migrations\\20241020134101_SeedDatabase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T13:41:01.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Models\\Game.cs",
+              "RelativeDocumentMoniker": "Models\\Game.cs",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Models\\Game.cs",
+              "RelativeToolTip": "Models\\Game.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA3wBYAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T13:17:18.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAA1wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T14:00:06.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "Models\\Review.cs",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Models\\Review.cs",
+              "RelativeToolTip": "Models\\Review.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T13:36:33.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Context\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Context\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Context\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Context\\ApplicationDbContext.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwDEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T13:13:13.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T13:10:42.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Users\\Index.cshtml",
+              "RelativeToolTip": "Views\\Users\\Index.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAkAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T16:48:51.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\jose-\\Documents\\UMD\\Fall2024\\SecDev\\Project\\TheOrchidArchade\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T15:47:25.421Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }

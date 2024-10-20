@@ -50,7 +50,11 @@ namespace TheOrchidArchade.Controllers
         // GET: Games/Create
         public IActionResult Create()
         {
-            ViewData["DeveloperId"] = new SelectList(_context.users, "Id", "Id");
+            var developers = _context.users
+                 .Where(u => u.isDeveloper == true)
+                 .Select(u => new { u.Id, u.Username })
+                 .ToList();
+            ViewData["DeveloperId"] = new SelectList(developers, "Id", "Username");
             return View();
         }
 
@@ -68,7 +72,7 @@ namespace TheOrchidArchade.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DeveloperId"] = new SelectList(_context.users, "Id", "Id", game.DeveloperId);
+
             return View(game);
         }
 
@@ -133,8 +137,6 @@ namespace TheOrchidArchade.Controllers
             {
                 return NotFound();
             }
-
-            // Populate the ViewModel
             var viewModel = new BuyGameViewModel
             {
                 GameId = game.Id,
@@ -142,7 +144,6 @@ namespace TheOrchidArchade.Controllers
                 Price = game.Price
             };
 
-            // Populate ViewBag with the list of users
             ViewBag.UserId = new SelectList(_context.users, "Id", "Username");
 
             return View(viewModel);
@@ -154,7 +155,6 @@ namespace TheOrchidArchade.Controllers
         public async Task<IActionResult> BuyGame(int userId, int gameId)
         {
 
-            // Create a new transaction object
             var transaction = new Transaction
             {
                 UserId = userId,
@@ -168,10 +168,9 @@ namespace TheOrchidArchade.Controllers
                 _context.transactions.Add(transaction);
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", "Users", new { id = userId });
             }
 
-            // In case of an invalid model state, return to the view
             return View();
         }
 

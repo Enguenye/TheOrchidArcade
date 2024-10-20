@@ -15,7 +15,7 @@ namespace TheOrchidArchade.Tests
         public UsersControllerTests()
         {
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-                .UseInMemoryDatabase(databaseName: "TestDatabase") // Create an in-memory database
+                .UseInMemoryDatabase(databaseName: "TestDatabase")
                 .Options;
 
             _context = new ApplicationDbContext(options);

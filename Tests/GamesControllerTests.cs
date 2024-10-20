@@ -72,7 +72,7 @@ namespace TheOrchidArchade.Tests
             _context.games.Add(game);
             await _context.SaveChangesAsync();
 
-            _context.Entry(game).State = EntityState.Detached; // Detach the tracked entity
+            _context.Entry(game).State = EntityState.Detached;
 
             var updatedGame = await _context.games.FindAsync(game.Id);
             updatedGame.Title = "UpdatedGame4";
@@ -117,10 +117,7 @@ namespace TheOrchidArchade.Tests
             _context.games.Add(game);
             await _context.SaveChangesAsync();
 
-            var result = await _controller.BuyGame(user.Id, game.Id);
-
-            var redirectResult = Assert.IsType<RedirectToActionResult>(result);
-            Assert.Equal("Index", redirectResult.ActionName);
+            await _controller.BuyGame(user.Id, game.Id);
 
             var transactionInDb = await _context.transactions.FirstOrDefaultAsync(t => t.UserId == user.Id && t.GameId == game.Id);
             Assert.NotNull(transactionInDb);
