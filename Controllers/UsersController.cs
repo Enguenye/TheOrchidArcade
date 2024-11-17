@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using TheOrchidArchade.Context;
 using TheOrchidArchade.Models;
 using TheOrchidArchade.Utils;
@@ -104,6 +105,11 @@ namespace TheOrchidArchade.Controllers
 
             if (ModelState.IsValid)
             {
+                if (string.IsNullOrEmpty(user.creditCardNumber))
+                {
+                    ModelState.AddModelError("", "You need to add a credit card number");
+                    return View(user);
+                }
                 user.creditCardNumber= _encryptionHelper.Encrypt(user.creditCardNumber);
                 var result = await _userManager.CreateAsync(user, password);
                 if (result.Succeeded)
@@ -126,8 +132,9 @@ namespace TheOrchidArchade.Controllers
 
                 foreach (var error in result.Errors)
                 {
-                    _logger.LogError($"Failed to send 2FA code: {error.Description}");
-                    return RedirectToAction("Error", "Home", new { message = error.Description });
+                    _logger.LogError($"Failed to create user: {error.Description}");
+                    ModelState.AddModelError("", "Failed to create user " + error.Description);
+                    return View(user);
                 }
             }
 
