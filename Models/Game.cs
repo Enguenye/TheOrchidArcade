@@ -2,7 +2,7 @@
 {
     public class Game
     {
-        public required int Id { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
 
         public string Title { get; set; }
 
@@ -16,12 +16,14 @@
 
         public double? Revenue { get; set; }
 
-        public required int DeveloperId { get; set; }
+        public string? DeveloperId { get; set; }
 
         public User? Developer { get; set; }
 
         public string? DownloadUrl { get; set; }
 
         public ICollection<Review>? Reviews { get; set; }
+
+        public ICollection<Transaction>? Transactions { get; set; }
     }
 }

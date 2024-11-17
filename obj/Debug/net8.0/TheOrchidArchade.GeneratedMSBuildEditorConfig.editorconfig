@@ -54,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -78,10 +82,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Reviews/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -90,24 +90,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Transactions/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25zXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Transactions/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25zXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Transactions/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25zXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Transactions/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25zXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Transactions/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY3Rpb25zXEluZGV4LmNzaHRtbA==
+[C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Users/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQWNjZXNzRGVuaWVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Users/Create.cshtml]
@@ -126,8 +110,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Users/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+[C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Users/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Users/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcU3VjY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/Users/Verify2FA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcVmVyaWZ5MkZBLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jose-/Documents/UMD/Fall2024/SecDev/Project/TheOrchidArchade/Views/_ViewImports.cshtml]

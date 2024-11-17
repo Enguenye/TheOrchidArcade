@@ -13,6 +13,12 @@ namespace TheOrchidArchade.Controllers
             _logger = logger;
         }
 
+        public IActionResult Error(string message)
+        {
+            ViewBag.ErrorMessage = message;
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -28,10 +34,5 @@ namespace TheOrchidArchade.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

@@ -1,6 +1,6 @@
 
 # The Orchid Arcade
-For a more detailed description and tutorial of the project you can check the docs folder.
+For a more detailed description and tutorial of the project you can check the Build and Installation Guide and User Guide documents on the docs folder.
 
 ## Setup of the Application
 
@@ -46,7 +46,10 @@ To launch the application, the following are required:
    Update-Database
    ```
 
-5. **Run the Server**  
+5. **Set up a Gmail account and environment variables** 
+	Set up the SMTP_USER and SMTP_PASSWORD environment variables with the email and the application key of the Gmail account that will be used. A detailed description of this is found on the Build and Installation Guide document. 
+
+6. **Run the Server**  
    You should now be able to run the HTTP server from Visual Studio without issues.
 
 ### Running Unit Tests

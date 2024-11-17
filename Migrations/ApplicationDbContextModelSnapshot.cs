@@ -22,7 +22,34 @@ namespace TheOrchidArchade.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("TheOrchidArchade.Models.Game", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -30,14 +57,117 @@ namespace TheOrchidArchade.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("TheOrchidArchade.Models.Game", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("CoverImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("DeveloperId")
-                        .HasColumnType("int");
+                    b.Property<string>("DeveloperId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("DownloadUrl")
                         .HasColumnType("nvarchar(max)");
@@ -64,10 +194,10 @@ namespace TheOrchidArchade.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = "a984c3ad-17a2-4f85-a785-49ee5a5a5dfe",
                             CoverImage = "https://i.imgur.com/8pVgqIR.png",
                             Description = "You're a hacker alien trying to escape a giant ariship. Use your knowledge and your abilities to escape this misterious place.Use the arrows to move and z to open your console.",
-                            DeveloperId = 1,
+                            DeveloperId = "1b467a74-ead5-4f49-b26b-7888348b34f3",
                             DownloadUrl = "https://drive.google.com/file/d/13VCHbObQlezmir5Q4e2wFdb-pVE-LC_u/view?usp=drive_link",
                             Genre = "Puzzles",
                             Price = 10.300000000000001,
@@ -76,10 +206,10 @@ namespace TheOrchidArchade.Migrations
                         },
                         new
                         {
-                            Id = 2,
+                            Id = "69418d94-2854-4dc4-a685-3359f988ab70",
                             CoverImage = "https://i.imgur.com/LWjv79J.png",
                             Description = "The cascade, your home, has been invaded by monsters . Defeat the monsters and purify the cascade back to its normal state.",
-                            DeveloperId = 1,
+                            DeveloperId = "1b467a74-ead5-4f49-b26b-7888348b34f3",
                             DownloadUrl = "https://drive.google.com/file/d/1kEO_qjonwWC4CIQxBDLAy2qfe1n1gl57/view?usp=drive_link",
                             Genre = "Bullet hell",
                             Price = 0.0,
@@ -88,10 +218,10 @@ namespace TheOrchidArchade.Migrations
                         },
                         new
                         {
-                            Id = 3,
+                            Id = "ce6b8f37-9d64-47aa-8b64-7efafea4feec",
                             CoverImage = "https://i.imgur.com/sWw7n5u.png",
                             Description = "Explore a haunted house riddled with monsters, puzzles and secrets trying to unravel the mysteries of this place.",
-                            DeveloperId = 1,
+                            DeveloperId = "1b467a74-ead5-4f49-b26b-7888348b34f3",
                             DownloadUrl = "https://drive.google.com/file/d/1VJk1Vq4bvS6INPSuOSu2eF3uJmTxRdgo/view?usp=drive_link",
                             Genre = "Horror",
                             Price = 5.0,
@@ -100,10 +230,10 @@ namespace TheOrchidArchade.Migrations
                         },
                         new
                         {
-                            Id = 4,
+                            Id = "eff4b4e5-183b-4996-ace8-37fc3c4cd4d2",
                             CoverImage = "https://i.imgur.com/ikEFkww.png",
                             Description = "You're a Monkey on a Monocycle",
-                            DeveloperId = 1,
+                            DeveloperId = "1b467a74-ead5-4f49-b26b-7888348b34f3",
                             DownloadUrl = "https://drive.google.com/file/d/1bAt1OLeVvi3Dr5yF6eWzaFXSJLy_YJjM/view?usp=sharing",
                             Genre = "Platformer",
                             Price = 4.0,
@@ -112,10 +242,10 @@ namespace TheOrchidArchade.Migrations
                         },
                         new
                         {
-                            Id = 5,
+                            Id = "2cb3f9cc-3ae8-43ab-bd5a-54d487f53454",
                             CoverImage = "https://i.imgur.com/QmpRPyE.png",
                             Description = "The frogs got teleported away from their home. Grow or shrink the objects of the environment to help them get back.",
-                            DeveloperId = 2,
+                            DeveloperId = "a176f533-5e1f-43a9-b0e4-03633b5eb945",
                             DownloadUrl = "https://enguenye.itch.io/froggyfreeway",
                             Genre = "Puzzles",
                             Price = 0.0,
@@ -124,10 +254,10 @@ namespace TheOrchidArchade.Migrations
                         },
                         new
                         {
-                            Id = 6,
+                            Id = "2fa3c2ca-9c74-45dc-82ff-74628c7380f4",
                             CoverImage = "https://img.itch.zone/aW1nLzEzNzI4MTM2LnBuZw==/original/xZxaEf.png",
                             Description = "The IRS Requisitioned all of your bees! Fight through hordes of government employees in an epic battle of the birds and the bees.",
-                            DeveloperId = 2,
+                            DeveloperId = "a176f533-5e1f-43a9-b0e4-03633b5eb945",
                             DownloadUrl = "https://magicow.itch.io/1098-bee",
                             Genre = "Puzzles",
                             Price = 15.6,
@@ -138,23 +268,22 @@ namespace TheOrchidArchade.Migrations
 
             modelBuilder.Entity("TheOrchidArchade.Models.Review", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("GameId")
-                        .HasColumnType("int");
+                    b.Property<string>("GameId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
@@ -167,62 +296,61 @@ namespace TheOrchidArchade.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = "018c485a-3b2d-41ad-9f17-13dd4b18318a",
                             Description = "Awesome game, I loved the Alien",
-                            GameId = 1,
+                            GameId = "a984c3ad-17a2-4f85-a785-49ee5a5a5dfe",
                             Rating = 5,
-                            UserId = 4
+                            UserId = "335924cd-2032-4617-9727-82f430250505"
                         },
                         new
                         {
-                            Id = 2,
+                            Id = "5a241740-9d97-4357-b4ee-ae19eb9f6a17",
                             Description = "Pretty cool concept",
-                            GameId = 2,
+                            GameId = "69418d94-2854-4dc4-a685-3359f988ab70",
                             Rating = 4,
-                            UserId = 4
+                            UserId = "335924cd-2032-4617-9727-82f430250505"
                         },
                         new
                         {
-                            Id = 3,
+                            Id = "1b6b6e5e-ff6d-4993-b64e-1ae38602550d",
                             Description = "Pretty terrifying",
-                            GameId = 3,
+                            GameId = "ce6b8f37-9d64-47aa-8b64-7efafea4feec",
                             Rating = 5,
-                            UserId = 4
+                            UserId = "335924cd-2032-4617-9727-82f430250505"
                         },
                         new
                         {
-                            Id = 4,
+                            Id = "98171394-4c50-48d7-bd64-7439c03a7d94",
                             Description = "This game sucks!!!",
-                            GameId = 4,
+                            GameId = "eff4b4e5-183b-4996-ace8-37fc3c4cd4d2",
                             Rating = 1,
-                            UserId = 4
+                            UserId = "335924cd-2032-4617-9727-82f430250505"
                         },
                         new
                         {
-                            Id = 5,
+                            Id = "e56af216-9e43-4452-8169-a5c0599d1ebd",
                             Description = "Was not my cup of tea",
-                            GameId = 1,
+                            GameId = "a984c3ad-17a2-4f85-a785-49ee5a5a5dfe",
                             Rating = 2,
-                            UserId = 5
+                            UserId = "b3670cd6-bb24-42d5-bd9f-55be4da6220d"
                         });
                 });
 
             modelBuilder.Entity("TheOrchidArchade.Models.Transaction", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("GameId")
-                        .HasColumnType("int");
+                    b.Property<string>("GameId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
@@ -235,72 +363,108 @@ namespace TheOrchidArchade.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = "42ac79f6-4c30-45e3-9f56-51b2b2ede5eb",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GameId = 1,
-                            UserId = 4
+                            GameId = "a984c3ad-17a2-4f85-a785-49ee5a5a5dfe",
+                            UserId = "335924cd-2032-4617-9727-82f430250505"
                         },
                         new
                         {
-                            Id = 2,
+                            Id = "1f124ae7-1b0c-4288-90a9-9ae78a14b76b",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GameId = 2,
-                            UserId = 4
+                            GameId = "69418d94-2854-4dc4-a685-3359f988ab70",
+                            UserId = "335924cd-2032-4617-9727-82f430250505"
                         },
                         new
                         {
-                            Id = 3,
+                            Id = "8b8049e8-f333-4bfe-bea9-db0d432cfe60",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GameId = 3,
-                            UserId = 4
+                            GameId = "ce6b8f37-9d64-47aa-8b64-7efafea4feec",
+                            UserId = "335924cd-2032-4617-9727-82f430250505"
                         },
                         new
                         {
-                            Id = 4,
+                            Id = "beb7b566-bc1a-4513-9f82-a47f7832db17",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GameId = 4,
-                            UserId = 4
+                            GameId = "eff4b4e5-183b-4996-ace8-37fc3c4cd4d2",
+                            UserId = "335924cd-2032-4617-9727-82f430250505"
                         },
                         new
                         {
-                            Id = 5,
+                            Id = "c06b9f1e-95d5-45d3-844e-f8e2b2682aa8",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GameId = 5,
-                            UserId = 4
+                            GameId = "2cb3f9cc-3ae8-43ab-bd5a-54d487f53454",
+                            UserId = "335924cd-2032-4617-9727-82f430250505"
                         },
                         new
                         {
-                            Id = 6,
+                            Id = "0315ebe4-0805-497e-b104-2f9e4709af0b",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GameId = 6,
-                            UserId = 4
+                            GameId = "2fa3c2ca-9c74-45dc-82ff-74628c7380f4",
+                            UserId = "335924cd-2032-4617-9727-82f430250505"
                         },
                         new
                         {
-                            Id = 7,
+                            Id = "d1340b84-0565-4b53-a8e5-410d82ef6ad6",
                             Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GameId = 3,
-                            UserId = 5
+                            GameId = "ce6b8f37-9d64-47aa-8b64-7efafea4feec",
+                            UserId = "b3670cd6-bb24-42d5-bd9f-55be4da6220d"
                         });
                 });
 
             modelBuilder.Entity("TheOrchidArchade.Models.User", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("creditCardNumber")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isDeveloper")
@@ -311,63 +475,163 @@ namespace TheOrchidArchade.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("users");
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
 
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = "1b467a74-ead5-4f49-b26b-7888348b34f3",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "2e28e301-5b95-44e5-ba2d-cc16fed215c8",
                             Email = "dev1@test.com",
-                            Password = "123",
-                            Username = "Developer1",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "369a351f-de5d-4217-b23a-ea3c6b3403eb",
+                            TwoFactorEnabled = false,
+                            UserName = "Developer1",
                             isDeveloper = true,
                             revenue = 0.0
                         },
                         new
                         {
-                            Id = 2,
+                            Id = "a176f533-5e1f-43a9-b0e4-03633b5eb945",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "0fb764fa-a6bb-47a7-8e40-6f44f3c346ea",
                             Email = "dev2@test.com",
-                            Password = "123",
-                            Username = "Developer2",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            PasswordHash = "AQAAAAIAAYagAAAAEGZ6Z2QZrR0CXOLW8i95LxiUw2kOGmEmVcPWMN31PUmZFacT7AEg3QdKvZtPsEPTrw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "245ad8b2-ce95-4d77-bfd6-9e112861adab",
+                            TwoFactorEnabled = false,
+                            UserName = "Developer2",
                             isDeveloper = true,
                             revenue = 0.0
                         },
                         new
                         {
-                            Id = 3,
+                            Id = "c7286475-489f-4ed5-b65c-1ee1367cfcf7",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "8fd0aeb4-ec75-4e86-b735-298a214b3f90",
                             Email = "dev3@test.com",
-                            Password = "123",
-                            Username = "Developer3",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            PasswordHash = "AQAAAAIAAYagAAAAEGZ6Z2QZrR0CXOLW8i95LxiUw2kOGmEmVcPWMN31PUmZFacT7AEg3QdKvZtPsEPTrw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "15b26fd7-fd3c-49e2-bc4a-709769e70f65",
+                            TwoFactorEnabled = false,
+                            UserName = "Developer3",
                             isDeveloper = true,
                             revenue = 0.0
                         },
                         new
                         {
-                            Id = 4,
+                            Id = "335924cd-2032-4617-9727-82f430250505",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "a5705548-baa0-4ef2-b0c8-8c151973322f",
                             Email = "client1@test.com",
-                            Password = "123",
-                            Username = "Client1",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            PasswordHash = "AQAAAAIAAYagAAAAEGZ6Z2QZrR0CXOLW8i95LxiUw2kOGmEmVcPWMN31PUmZFacT7AEg3QdKvZtPsEPTrw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "e5fba439-fce3-455b-9490-e6db020fdbcf",
+                            TwoFactorEnabled = false,
+                            UserName = "Client1",
                             isDeveloper = false,
                             revenue = 0.0
                         },
                         new
                         {
-                            Id = 5,
+                            Id = "b3670cd6-bb24-42d5-bd9f-55be4da6220d",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "5a991975-7f15-4165-943f-6d45025648a7",
                             Email = "client2@test.com",
-                            Password = "123",
-                            Username = "Client2",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            PasswordHash = "AQAAAAIAAYagAAAAEGZ6Z2QZrR0CXOLW8i95LxiUw2kOGmEmVcPWMN31PUmZFacT7AEg3QdKvZtPsEPTrw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "e9aa2f6c-9625-4c33-8eaf-77effb41213c",
+                            TwoFactorEnabled = false,
+                            UserName = "Client2",
                             isDeveloper = false,
                             revenue = 0.0
                         },
                         new
                         {
-                            Id = 6,
+                            Id = "534ea39b-b93b-444c-846c-a2d97eb0d8ca",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "2577aaf4-9a7d-4e08-b176-cb35538c4067",
                             Email = "client3@test.com",
-                            Password = "123",
-                            Username = "Client3",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            PasswordHash = "AQAAAAIAAYagAAAAEGZ6Z2QZrR0CXOLW8i95LxiUw2kOGmEmVcPWMN31PUmZFacT7AEg3QdKvZtPsEPTrw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "35194141-3e90-4bb5-96ab-ad4d8c65069f",
+                            TwoFactorEnabled = false,
+                            UserName = "Client3",
                             isDeveloper = false,
                             revenue = 0.0
                         });
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.HasOne("TheOrchidArchade.Models.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.HasOne("TheOrchidArchade.Models.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TheOrchidArchade.Models.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.HasOne("TheOrchidArchade.Models.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("TheOrchidArchade.Models.Game", b =>
@@ -375,8 +639,7 @@ namespace TheOrchidArchade.Migrations
                     b.HasOne("TheOrchidArchade.Models.User", "Developer")
                         .WithMany()
                         .HasForeignKey("DeveloperId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Developer");
                 });
@@ -390,9 +653,9 @@ namespace TheOrchidArchade.Migrations
                         .IsRequired();
 
                     b.HasOne("TheOrchidArchade.Models.User", "User")
-                        .WithMany()
+                        .WithMany("Reviews")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Game");
@@ -403,15 +666,15 @@ namespace TheOrchidArchade.Migrations
             modelBuilder.Entity("TheOrchidArchade.Models.Transaction", b =>
                 {
                     b.HasOne("TheOrchidArchade.Models.Game", "Game")
-                        .WithMany()
+                        .WithMany("Transactions")
                         .HasForeignKey("GameId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("TheOrchidArchade.Models.User", "User")
-                        .WithMany()
+                        .WithMany("Transactions")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Game");
@@ -422,6 +685,15 @@ namespace TheOrchidArchade.Migrations
             modelBuilder.Entity("TheOrchidArchade.Models.Game", b =>
                 {
                     b.Navigation("Reviews");
+
+                    b.Navigation("Transactions");
+                });
+
+            modelBuilder.Entity("TheOrchidArchade.Models.User", b =>
+                {
+                    b.Navigation("Reviews");
+
+                    b.Navigation("Transactions");
                 });
 #pragma warning restore 612, 618
         }

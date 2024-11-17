@@ -1,17 +1,17 @@
-﻿namespace TheOrchidArchade.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace TheOrchidArchade.Models
 {
-    public class User
+    public class User : IdentityUser
     {
-        public required int Id { get; set; }
-
-        public required string Email { get; set; }
-
-        public string? Password { get; set; }
-
-        public required string Username { get; set; }
-
         public double? revenue { get; set; }
 
         public required bool isDeveloper { get; set; }
+
+        public string? creditCardNumber { get; set; }
+
+        public ICollection<Review>? Reviews { get; set; }
+
+        public ICollection<Transaction>? Transactions { get; set; }
     }
 }

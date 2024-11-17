@@ -5,6 +5,9 @@
 }
 
 <h1>Details</h1>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.User?.Id">Edit Profile</a> 
+</div>
 
 <div>
     <h4>User</h4>
@@ -17,22 +20,22 @@
             @Html.DisplayFor(model => model.User.Email)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.User.Password)
+            @Html.DisplayNameFor(model => model.User.UserName)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.User.Password)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.User.Username)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.User.Username)
+            @Html.DisplayFor(model => model.User.UserName)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.User.revenue)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.User.revenue)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.creditCardNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.creditCardNumber)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.User.isDeveloper)
@@ -81,7 +84,64 @@
     </tbody>
 </table>
 
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.User?.Id">Edit</a> |
-    <a asp-action="Index">User's list</a>
-</div>
+@if (Model.User.isDeveloper && Model.CreatedGames.Any())
+{
+    <h4>Created Games</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var game in Model.CreatedGames)
+            {
+                <tr>
+                    <td>@game.Title</td>
+                    <td>@game.Price</td>
+                    <td>
+                        <a asp-action="Edit" asp-controller="Games" asp-route-id="@game.Id" class="btn btn-warning">Edit</a>
+                        <a asp-action="Delete" asp-controller="Games" asp-route-id="@game.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<h4>User Reviews</h4>
+@if (Model.Reviews != null && Model.Reviews.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Game Title</th>
+                <th>Rating</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var review in Model.Reviews)
+            {
+                <tr>
+                    <td>@review.Game?.Title</td>
+                    <td>@review.Rating / 5</td>
+                    <td>@review.Description</td>
+                    <td>
+                        <a asp-action="Edit" asp-controller="Reviews" asp-route-id="@review.Id" class="btn btn-warning">Edit</a>
+                        <a asp-action="Delete" asp-controller="Reviews" asp-route-id="@review.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No reviews available.</p>
+}
+
+

@@ -78,7 +78,6 @@ C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\
 C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\System.Runtime.Caching.dll
 C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\xunit.abstractions.dll
 C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\xunit.assert.dll
@@ -336,3 +335,18 @@ C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\
 C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Serilog.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\jose-\Documents\UMD\Fall2024\SecDev\Project\TheOrchidArchade\bin\Debug\net8.0\Serilog.Sinks.Debug.dll

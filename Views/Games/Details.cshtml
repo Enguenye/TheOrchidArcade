@@ -10,48 +10,54 @@
     <h4>Game</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
+        <dd class="col-sm-10">
+            @Html.Encode(Model.Title)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.CoverImage)
         </dt>
-
         <dd class="col-sm-10">
-            <img src="@Model.CoverImage" alt="Cover Image" style="max-width: 200px; max-height: 300px;" />
+            @if (!string.IsNullOrEmpty(Model.CoverImage))
+            {
+                <img src="@Html.Encode(Model.CoverImage)" alt="Cover Image" style="max-width: 200px; max-height: 300px;" />
+            }
+            else
+            {
+                <span class="text-muted">No image available</span>
+            }
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Description)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
+        <dd class="col-sm-10">
+            @Html.Encode(Model.Description)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Genre)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Genre)
+        <dd class="col-sm-10">
+            @Html.Encode(Model.Genre)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Price)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Price)
+        <dd class="col-sm-10">
+            @Html.Encode(Model.Price.ToString("C"))
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Revenue)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Revenue)
+        <dd class="col-sm-10">
+            @Html.Encode(Model.Revenue?.ToString("C"))
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Developer)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Developer.Username)
+        <dd class="col-sm-10">
+            @Html.Encode(Model.Developer?.UserName)
         </dd>
     </dl>
 </div>
@@ -64,6 +70,7 @@
     <table class="table">
         <thead>
             <tr>
+                <th>Username</th>
                 <th>Rating</th>
                 <th>Description</th>
             </tr>
@@ -72,14 +79,15 @@
             @foreach (var review in Model.Reviews)
             {
                 <tr>
+                    <td>@Html.Encode(review.User?.UserName)</td>
                     <td>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width:@(review.Rating * 20)%;" aria-valuenow="@review.Rating" aria-valuemin="0" aria-valuemax="5">
-                                @review.Rating / 5
+                            <div class="progress-bar" role="progressbar" style="width:@Html.Encode((review.Rating * 20).ToString())%;" aria-valuenow="@Html.Encode(review.Rating.ToString())" aria-valuemin="0" aria-valuemax="5">
+                                @Html.Encode(review.Rating.ToString()) / 5
                             </div>
                         </div>
                     </td>
-                    <td>@review.Description</td>
+                    <td>@Html.Encode(review.Description)</td>
                 </tr>
             }
         </tbody>
@@ -90,6 +98,5 @@ else
     <p>No reviews yet.</p>
 }
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
