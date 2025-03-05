@@ -1,6 +1,6 @@
 
 # The Orchid Arcade
-For a more detailed description and tutorial of the project you can check the Build and Installation Guide and User Guide documents on the docs folder.
+The Orchid Arcade is a web platform to upload, manage and buy games. For a more detailed description and tutorial of the project you can check the Build and Installation Guide and User Guide documents on the docs folder.
 
 ## Setup of the Application
 
