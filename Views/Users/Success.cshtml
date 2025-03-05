@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Account Created Successfully";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>Your account has been created successfully, and two-factor authentication has been enabled!</p>
+<p>You can now log in to your account using your credentials.</p>
+
+<a asp-controller="Account" asp-action="Login" class="btn btn-primary">Log In</a>

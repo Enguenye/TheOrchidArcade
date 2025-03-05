@@ -1,0 +1,147 @@
+﻿@model TheOrchidArchade.Models.UserDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.User?.Id">Edit Profile</a> 
+</div>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.revenue)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.revenue)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.creditCardNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.creditCardNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.isDeveloper)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.isDeveloper)
+        </dd>
+    </dl>
+
+    @if (Model.User.isDeveloper == true)
+    {
+        <a asp-action="Create" asp-controller="Games" class="btn btn-primary">Create Game</a>
+    }
+</div>
+
+<h4>Purchased Games</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var game in Model.Games)
+        {
+            <tr>
+                <td>@game.Title</td>
+                <td>@game.Price</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(game.DownloadUrl))
+                    {
+                        <a href="@game.DownloadUrl" class="btn btn-primary" target="_blank">Download</a>
+                    }
+                    else
+                    {
+                        <span class="text-muted">No download link available</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Create" asp-controller="Review" asp-route-gameId="@game.Id" asp-route-userId="@Model.User.Id" class="btn btn-success">Add Review</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.User.isDeveloper && Model.CreatedGames.Any())
+{
+    <h4>Created Games</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var game in Model.CreatedGames)
+            {
+                <tr>
+                    <td>@game.Title</td>
+                    <td>@game.Price</td>
+                    <td>
+                        <a asp-action="Edit" asp-controller="Games" asp-route-id="@game.Id" class="btn btn-warning">Edit</a>
+                        <a asp-action="Delete" asp-controller="Games" asp-route-id="@game.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<h4>User Reviews</h4>
+@if (Model.Reviews != null && Model.Reviews.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Game Title</th>
+                <th>Rating</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var review in Model.Reviews)
+            {
+                <tr>
+                    <td>@review.Game?.Title</td>
+                    <td>@review.Rating / 5</td>
+                    <td>@review.Description</td>
+                    <td>
+                        <a asp-action="Edit" asp-controller="Reviews" asp-route-id="@review.Id" class="btn btn-warning">Edit</a>
+                        <a asp-action="Delete" asp-controller="Reviews" asp-route-id="@review.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No reviews available.</p>
+}
+
+

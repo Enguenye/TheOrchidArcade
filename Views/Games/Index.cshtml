@@ -1,0 +1,84 @@
+﻿@model IEnumerable<TheOrchidArchade.Models.Game>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Games:</h1>
+
+<p>
+    @if (ViewData["IsDeveloper"] != null && (bool)ViewData["IsDeveloper"])
+    {
+        <a asp-action="Create">Create New</a>
+    }
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoverImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Revenue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Developer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.Encode(item.Title)
+                </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.CoverImage))
+                    {
+                        <img src="@Html.Encode(item.CoverImage)" alt="Game Cover" style="width: 100px; height: auto;" />
+                    }
+                    else
+                    {
+                        <span class="text-muted">No image available</span>
+                    }
+                </td>
+                <td>
+                    @Html.Encode(item.Description)
+                </td>
+                <td>
+                    @Html.Encode(item.Genre)
+                </td>
+                <td>
+                    @Html.Encode(item.Price.ToString("C")) <!-- Format as currency -->
+                </td>
+                <td>
+                    @Html.Encode(item.Revenue?.ToString("C")) <!-- Format as currency, handle null -->
+                </td>
+                <td>
+                    @Html.Encode(item.Developer?.UserName) <!-- Handle null Developer -->
+                </td>
+                <td>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a asp-action="Buy" asp-route-id="@Html.Encode(item.Id)">Buy</a>
+                    }
+                    <a asp-action="Details" asp-route-id="@Html.Encode(item.Id)">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
